@@ -18,7 +18,10 @@ const forecast = (lat,long,callback)=>{
              temp: body.currently.temperature,
              prec: body.currently.precipProbability,
              humidity: body.currently.humidity,
-             summary: body.daily.data[0].summary
+             summary: body.daily.data[0].summary,
+             time: body.currently.time,
+             windSpeed:body.currently.windSpeed
+
            
          })
         }

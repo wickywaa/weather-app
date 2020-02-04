@@ -91,7 +91,7 @@ app.get('/weather',(req,res)=>{
         }
         
     
-    forecast(latitude,longitude, (error, {temp,summary, prec, humidity}) => {
+    forecast(latitude,longitude, (error, {temp,summary, prec, humidity,windSpeed,time}) => {
         if (error){
             return res.send({
                 error:error
@@ -105,6 +105,8 @@ app.get('/weather',(req,res)=>{
         temp:temp,
         chanceOfRain:prec,
         humidity:humidity,
+        time:time,
+        windSpeed:windSpeed
 
 
         })
