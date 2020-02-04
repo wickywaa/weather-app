@@ -25,7 +25,8 @@ app.get('',(req,res)=>{
 
     res.render('index',{
         title: 'Weather app',
-        name: 'Gavin Newton'
+        name: 'Gavin Newton',
+        date: '04.02.2020'
     })
 
 })
